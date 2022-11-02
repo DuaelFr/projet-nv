@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  </head>
+  <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <header role="banner"></header>
+
+    <main role="main">
+      <h1>{{ title or metadata.title }}</h1>
+      {{ content | safe }}
+    </main>
+
+    <footer role="contentinfo"></footer>
+
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
+</html>
