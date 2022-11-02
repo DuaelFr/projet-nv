@@ -1,7 +1,14 @@
 name: projet-nv
+proxy:
+  appserver:
+    - projet-nv.lndo.site:8080
 services:
   appserver:
     type: node:12
+    build:
+      - npm ci
+    command: npm start
+    port: 8080
 tooling:
   node:
     service: appserver
