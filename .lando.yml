@@ -1,0 +1,11 @@
+name: projet-nv
+services:
+  appserver:
+    type: node:12
+tooling:
+  node:
+    service: appserver
+  npm:
+    service: appserver
+  npx:
+    service: appserver
