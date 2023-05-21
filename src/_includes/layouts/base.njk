@@ -9,14 +9,38 @@
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   </head>
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-    <header role="banner"></header>
+    <header role="banner">
+      <div class="layout-wrapper">
+        <div class="branding"><a href="/" title="Projet NV - Accueil">Projet NV</a></div>
+        <nav role="navigation" aria-labelledby="main-nav-title">
+          <h2 class="sr-only" id="main-nav-title">Navigation principale</h2>
+          <ul>
+            <li><a href="/association">L'association</a></li>
+            <li><a href="/projets">Nos projets</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main role="main">
-      <h1>{{ title or metadata.title }}</h1>
-      {{ content | safe }}
+      <div class="layout-wrapper">
+        {{ content | safe }}
+      </div>
     </main>
 
-    <footer role="contentinfo"></footer>
+    <footer role="contentinfo">
+      <div class="layout-wrapper">
+        <nav role="navigation" aria-labelledby="secondary-nav-title">
+          <h2 class="sr-only" id="secondary-nav-title">Navigation secondaire</h2>
+          <ul>
+            <li><a href="/accessibilite">Accessibilité : non conforme</a></li>
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
