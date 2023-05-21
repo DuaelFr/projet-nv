@@ -1,0 +1,14 @@
+a {
+  color: var(--hunter-green);
+  outline-offset: .25em;
+  text-decoration-color: var(--apple-green);
+  text-decoration-style: wavy;
+  transition: color 200ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--cal-poly-green);
+    text-decoration-style: solid;
+    text-decoration-thickness: 4px;
+  }
+}

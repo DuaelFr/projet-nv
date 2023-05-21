@@ -1,0 +1,5 @@
+@use "../abstractions/accessibility";
+
+.sr-only {
+  @include accessibility.sr-only;
+}

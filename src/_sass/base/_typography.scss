@@ -1,0 +1,15 @@
+@use "../abstractions/containers";
+@use "../abstractions/units";
+
+body {
+  color: var(--eerie-black);
+  font-family: Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.intro {
+  @include containers.text-container;
+  color: var(--cal-poly-green);
+  font-size: 1.1rem;
+  margin-block: units.px-to-rem(30);
+}
