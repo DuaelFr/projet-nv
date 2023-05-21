@@ -1,3 +1,7 @@
-body {
-  background: #dfd;
-}
+@use "abstractions/accessibility";
+@use "abstractions/containers";
+@use "abstractions/full_page_width";
+@use "abstractions/units";
+
+@import "variables/colors";
+

@@ -1,0 +1,12 @@
+@use "units";
+
+@mixin layout-container {
+  max-width: units.px-to-rem(880);
+  margin: 0 auto;
+  padding: 0 units.px-to-rem(10);
+}
+
+@mixin text-container {
+  max-width: units.px-to-rem(550);
+  margin: 0 auto;
+}
