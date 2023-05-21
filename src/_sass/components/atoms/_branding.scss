@@ -1,0 +1,30 @@
+.branding {
+  font-weight: bold;
+  font-size: 2rem;
+
+  a {
+    color: var(--hunter-green);
+    isolation: isolate;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      background: var(--apple-green);
+      content: '';
+      inset: calc(100% - .35rem) 0 0 0;
+      opacity: 1;
+      position: absolute;
+      transition: inset 200ms ease-in-out, opacity 200ms ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        inset: -.25rem;
+        opacity: .5;
+      }
+    }
+  }
+}
