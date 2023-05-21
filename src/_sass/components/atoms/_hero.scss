@@ -1,0 +1,31 @@
+@use "../../abstractions/containers";
+@use "../../abstractions/full_page_width";
+
+.hero {
+  @include full_page_width.full-page-width;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--cal-poly-green) 50%, var(--eerie-black) 100%);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  min-height: 40dvh;
+  position: relative;
+}
+
+.hero__background {
+  inset: 0 0 0 auto;
+  pointer-events: none;
+  position: absolute;
+  text-align: right;
+
+  picture, img {
+    object-fit: contain;
+    max-height: 100%;
+    mix-blend-mode: soft-light;
+    width: auto;
+  }
+}
+
+.hero__content {
+  @include containers.layout-container;
+}
