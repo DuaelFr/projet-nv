@@ -4,7 +4,7 @@ proxy:
     - projet-nv.lndo.site:8080
 services:
   appserver:
-    type: node:12
+    type: node:18
     build:
       - npm ci
     command: npm start

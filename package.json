@@ -6,11 +6,9 @@
     "build:sass": "sass src/_sass:dist/css",
     "build:eleventy": "npx eleventy",
     "build": "npm-run-all build:*",
-
     "watch:sass": "sass --watch src/_sass:dist/css",
     "watch:eleventy": "npx eleventy --serve",
     "watch": "npm-run-all build:sass --parallel watch:*",
-
     "start": "npm run watch"
   },
   "devDependencies": {
